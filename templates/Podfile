@@ -1,0 +1,15 @@
+source "http://git.oschina.net/zykj135/PodSpecs.git"
+source "https://github.com/CocoaPods/Specs.git"
+
+use_frameworks!
+
+target '__ProjectName__' do
+    pod '__ProjectName__', :path => '../'
+
+  target '__ProjectName___Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 1.0.0'
+    pod 'Nimble', '~> 5.1.1'
+  end
+end
